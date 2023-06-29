@@ -1,0 +1,416 @@
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html{
+    scroll-padding-top:55px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+:root{
+    --maincolor:#e65f78;
+}
+
+
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)) ,url(../images/header-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header h2{
+    font-size: 60px;
+}
+
+@media screen and (max-width:800px) {
+    header h2{
+        font-size: 45px;
+    }
+}
+
+.home-pragraph{
+    max-width: 500px;
+}
+
+.cv-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.cv-btn:hover{
+    background-color: #fff;
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.moveUp{
+    width: 35px;
+    height: 35px;
+    background-color: var(--maincolor);
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    z-index: 999;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* //////////////////////////////////////////////// */
+
+.navbar-expand-lg .navbar-nav .nav-link.active{
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #333;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: var(--maincolor);
+}
+.navbar-brand{
+    color: #333;
+}
+.navbar-brand:hover{
+    color: #333;
+}
+
+
+
+/* ///////////////////////////////////////////////////// */
+.text-pink{
+    color: var(--maincolor);
+}
+
+.about-link ul li {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: all 0.3s;
+}
+
+.about-link ul li:hover{
+    border: 2px solid var(--maincolor);
+
+}
+
+.about-link ul li i{
+    transition: all 0.3s;
+}
+.about-link ul li:hover i{
+    color: var(--maincolor);
+}
+
+/* /////////////////////////////////////////////////// */
+.nav-pills .nav-link.active{
+    background-color: var(--maincolor);
+    border-radius: 25px;
+}
+
+.nav-link{
+    color: #333;
+}
+.portfolio.nav-link:hover{
+    color: #fff;
+    background-color: var(--maincolor);
+    border-radius: 25px;
+    transition: 1s;
+}
+
+nav .nav-pills{
+    width: 500px;
+}
+
+.item .item-overlay{
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    transition:all 0.5s;
+
+}
+.item:hover .item-overlay{
+    top: 0;
+    z-index: 22;
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.item:hover::after{
+    opacity: 1;
+}
+
+.item img{
+    transition: all 0.5s;
+}
+.item:hover img{
+    transform: scale(1.1);
+}
+
+.my-title p{
+    max-width: 500px;
+}
+
+#blog{
+    background-color: #F8F9FA;
+}
+
+/* //////////////////////////////////////////////// */
+.personal-input input{
+    width: 49%;
+}
+
+.contact-btn{
+    background-color: var(--maincolor);
+    color: #fff;
+    
+}
+.contact-btn:hover{
+    background-color: #ec526e;
+    color: #fff;
+}
+
+.form-control:focus{
+    border-color: var(--maincolor);
+    box-shadow: var(--maincolor);
+}
+
+@media screen and (max-width:768px){
+    .personal-input {
+        display: flex;
+        flex-direction: column;
+    }
+    .personal-input input{
+        width: 100%;
+        margin-top: 23px;
+    }
+}
+
+/* /////////////////////////////////////////////////////////// */
+
+.client{
+    background-color: #F8F9FA;
+}
+
+.clientp{
+    max-width: 670px;
+}
+
+.carousel-indicators{
+    bottom: -30px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 5px;
+    background-color: #cc8794;
+    border-radius: 43%;
+}
+.carousel-indicators .active{
+    width: 20px;
+    background-color: var(--maincolor);
+}
+/* ////////////////////////////////////////////// */
+
+.spinner{
+    position: fixed;
+    top: 22%;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    background-color: #2B2424;
+    border-radius: 0% 7px 7px 0;
+    z-index: 99;
+    opacity: 1;
+}
+
+@media screen and (max-width:992px){
+    .spinner{
+        opacity: 0;
+    }
+
+}
+
+
+.fig{
+    width: 30px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    position: absolute; 
+    border-radius: 30px;
+    top: 87%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: upAndDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.fig2{
+    position: absolute;
+    width: 3px;
+    height: 30%;
+    background-color: #FFFFFF;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+}
+
+@keyframes upAndDown {
+    0%{
+        top: 87%;
+    }
+
+    25%{
+        top: 84% ;
+    }
+
+    50%{
+        top :82% ;
+    }
+
+    75%{
+        top: 80%;
+    }
+    100%{
+        top: 87% ;
+    }
+}
+
+
+
+
+.text-animation::after{
+    content: "";
+    animation-name: header-animation ;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes header-animation {
+    0% {content: "I'M A |";}
+    3% {content: "I'M A D|";}
+    5% {content: "I'M A De|";}
+    7% {content: "I'M A Dev|";}
+    10% {content: "I'M A Deve|";}
+    13% {content: "I'M A Devel|";}
+    15% {content: "I'M A Develo|";}
+    17% {content: "I'M A Develop|";}
+    20% {content: "I'M A Developm|";}
+    24% {content: "I'M A Developme|";}
+    25% {content: "I'M A Developmen|";}
+    27% {content: "I'M A Development|";}
+    30% {content: "I'M A Development|";}
+    32% {content: "I'M A Developmen|";}
+    35% {content: "I'M A Developme|";}
+    37% {content: "I'M A Develop|";}
+    40% {content: "I'M A Develo|";}
+    42% {content: "I'M A Devel|";}
+    45% {content: "I'M A Deve|";}
+    47% {content: "I'M A Dev|";}
+    50% {content: "I'M A De|";}
+    52% {content: "I'M A Des|";}
+    55% {content: "I'M A Desi|";}
+    57% {content: "I'M A Desig|";}
+    60% {content: "I'M A Design|";}
+    62% {content: "I'M A Designe|";}
+    65% {content: "I'M A Designer|";}
+    67% {content: "I'M A Designer|";}
+    70% {content: "I'M A Designe|";}
+    72% {content: "I'M A Design|";}
+    75% {content: "I'M A Desig|";}
+    77% {content: "I'M A Desi|";}
+    80% {content: "I'M A Des|";}
+    82% {content: "I'M A De|";}
+    85% {content: "I'M A Dev|";}
+    87% {content: "I'M A Deve|";}
+    90% {content: "I'M A Devel|";}
+    92% {content: "I'M A Develo|";}
+    95% {content: "I'M A Develop|";}
+    97% {content: "I'M A Develope|";}
+    100% {content: "I'M A Developer|";}
+}
+
+/* //////////////////////////////// */
+.footer{
+    background-color: #212121;
+}
+
+.social-footer  li{
+    width: 47px;
+    height: 47px;
+    background-color: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.social-footer  li i{
+    transition: 0.5s;
+}
+
+footer ul li:hover i{
+    color: var(--maincolor) !important;
+}
+
+.Services{
+    background-color: #F8F9FA;
+}
+
+/* //////////////////////////////////////////////// */
+.services-card h2{
+    position: relative;
+}
+.services-card h2::before{
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 7px;
+    background-color: var(--maincolor);
+    transition: all 1s;
+}
+.services-card:hover h2:before{
+    width: 22%;
+}
+
+.services-card{
+    border: 1px solid #3333331e;
+}
+
+.hire-btn{
+    background-color: var(--maincolor);
+    color: #fff;
+}
+.hire-btn:hover{
+    background-color: #ec526e;
+    color: #fff;
+}
